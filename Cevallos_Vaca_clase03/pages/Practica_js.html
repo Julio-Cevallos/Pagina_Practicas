@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- ================ metadatos ================= -->
+        <meta charset="UTF-8">
+        <meta name="descripcion" content="practicas-- HTML, CSS, JS"> <!--  -->
+        <meta name="keywords" content="HTML, CSS, JavaScript"> <!--  -->
+        <meta name="author" content="Julio Cevallos"> <!--  -->
+        <!-- <meta http-equiv="refresh" content="10">  -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--  -->
+        <meta> <!--  -->
+
+        <!-- ================ Titulo e Icono ================= -->
+        <title> Practica JavaScript </title>
+        <link rel="icon" href="../img/Articuno.ico" type="image/x-icon">
+		
+		<!-- JavaScript puede ejecutarse tanto en el documento HTML o desde un file externo -->
+		<!-- JavaScript puede ejecutarse, antes del body, dentro del body, despúes, en file externo -->
+		
+		<!-- ================ Antes del Body - Interno ================= -->
+		<script>
+			alert("Este es mi primer mensaje alert - Interno - Antes del Body");
+		</script>
+	
+    </head>
+
+    <body>
+        <hr>
+        <!-- =============== Barra de Navegacion =============== -->
+        <nav>
+            <a href="../index.html"> Inicio </a> | 
+            <a href="../pages/Practica_texto.html"> Práctica de Texto </a> | 
+            <a href="https://sites.google.com/fiec.espol.edu.ec/la-chocita-ecuatoriana?usp=sharing"> Práctica de Builder (Google Site) </a> | 
+            <a href="https://renovatumundo.my.canva.site/"> Práctica Canva (Link a Canva) </a> | 
+            <a href="../ia/index.html"> Práctica de Inteligencia Artificial </a> | 
+            <a href="../pages/Practica_Listas.html"> Práctica de Listas</a> | 
+            <a href="../pages/Practica_imagen.html"> Práctica de Imágenes </a> | 
+            <a href="../pages/Practica_audio.html"> Práctica de Audio </a> | 
+            <a href="../pages/Practica_video.html"> Práctica de Video </a> | 
+            <a href="../pages/Practica_tablas.html"> Práctica de Tablas </a> | 
+            <a href="../pages/Practica_css.html"> Práctica de CSS </a> | 
+            <a href="../CopyPaste/index.html"> Práctica de Copy Paste (Plantilla) </a> | 
+            <a href="../pages/Practica_js.html"> Práctica de JavaScript </a> | 
+            <a href="../pages/Practica_controles.html"> Práctica de Controles </a> | 
+            <a href="../pages/Practica_formulario.html"> Práctica de Formularios </a> | 
+            <a href="../pages/Practica_formulario2.html"> Práctica de Formularios-2 </a> | 
+            <a href="../pages/Practica_menuH.html"> Práctica de Menú Horizontal </a> | 
+            <a href="../pages/Practica_menuV.html"> Práctica de Menú Vertical </a> | 
+            <a href="../pages/Practica_crazy.html"> Práctica Crazy </a> | 
+        </nav>
+
+        <hr>
+        <!-- =============== Practica de etiquetas de JavaScript =============== -->
+         <main>
+            <h1> Practica de JavaScript </h1>
+			
+			<section>
+				<p> 
+					JavaScript es un lenguaje de programación que se ejecuta tanto en el Frontend como en el Backend
+				</p>
+				
+				<p> 
+					JavaScript se usa en varios Frameworks:
+				</p>
+				
+				<ol>
+					<li> React </li>
+					<li> Vue.js </li>
+					<li> Angular </li>
+					<li> Svelte/SvelteKit </li>
+					<li> Next.js </li>
+					<li> Nuxt.js </li>
+					<li> Astro </li>
+				</ol>
+			</section>
+			
+			<!-- =============== Script dentro del body - Interno =============== -->
+			<section>
+				<p> 
+					Para programar en JavaScript usted hara uso de sus conocimientos en programación (básicos/intermedios)<br>
+					Variable: locales, globales, estaticas/constantes<br>
+					Estructuras de control (if/else)<br>
+					Bucles (for/while/...)<br>
+					Funciones<br>
+				</p>
+			</section>
+			<hr>
+			
+			<section>
+				<h3> Tipos de Variables </h3>
+				<ul> 
+					<li> let. locales - se usan dentro de una funcion o bloque de programacion </li>
+					<li> var: globales . las podemos usar en cualquier parte del desarrollo </li>
+					<li> const: constantes - variables con valores fijos, que no pueden cambiar su valor </li>
+				</ul>
+			</section>
+			<hr>
+			
+			<section>
+				<h3> Tipos de Datos </h3>
+				<ul> 
+					<li> String: caracteres alfanumericos </li>
+					<li> Number: valores numericos </li>
+					<li> Booleano: true/false </li>
+					<li> Arrays: Listas["Elemento Liste #", "Elemento Lista #2", "Elemento Lista #N"] </li>
+					<li> Object - Diccionarios: NombreDiccionario{"clave1":"valor1", "clave2":"valor2", "claveN":"valorN"}  </li>
+					<li> Null . Valor Indefnido </li>
+				</ul>
+			</section>
+			<hr>
+			
+			<section>
+				<h3> Programacion en JavaScript </h3>
+				<ul> 
+					<li> Condiciones: if/else </li>
+					<li> Estrcuturas: switch </li>
+					<li> Ciclos/Bucles: for/while/do while </li>
+					<li> for...for - para recorrer colecciones (arrays) </li>
+					<li> for...in - para recorrer object/dicc (clave) </li>
+				</ul>
+			</section>
+			<hr>
+			
+			<section>
+				<h3> Momento-Luga rcuando se ejecuta JavaScript </h3>
+				<ol> 
+					<li> Script dentro del HTML - Script embebido en medio del HTML - (inline Script Early) </li>
+					<li> Script dentro de un control - uso de los atributos en elementos HTML - (inline Events Handlers) </li>
+					<li> Script al final (Antes de cerrar body) - Script embebido antes de cerrar el body - (inline Script Late) </li>
+					<li> Archivo Externo (.js) - Script externo vinculado al HTML - (External Script) </li>
+				</ol>
+			</section>
+			<hr>
+			
+			<section>
+				<h3> Prueba de Ejecucion de cada momento </h3>
+				<ol> 
+					<li> 
+						Script dentro del HTML - inline Script Early <br>
+						<script>
+							document.write("Este es mi primer mensaje generado con document.write - entro del body");
+						</script>
+					</li>
+					
+					<li> 
+						Script dentro de un control - inline Events Handlers <br>
+						<!-- Debemos conocer los eventos que realiza el usuario -->
+						<button onclick="alert('Script Ejecutado dentro de un control (botón)')"> Presioname 1 </button>
+					</li>
+						
+					<li> 
+						Script al final (Antes de cerrar body) - inline Script Late <br>
+						<button id="btnPresioname2" onclick="mostrarAlert()"> Presioname 2 </button>
+					</li>
+						
+					<li> 
+						Archivo Externo (.js) - External Script <br>
+						<!-- Se recomienda no hacer llamados a funcion, en su lugar trabajar con los IDs-->
+						<button id="btnPresioname3"> Presioname 3 </button>
+						
+						<!-- Hackear al Usuario -->
+						<!-- Modificar controles a traves de eventos -->
+						<h5> Modificar el contenido del HTML desde JavaScript </h5>
+						<p id="prf1">
+							Este párrafo fue ecrito en HTML, los fuentes no deberia ser modificado desde el Script.
+						</p>
+						
+						<!-- Modificar contenido cation por medio de n botón -->
+						<button id="btnPresioname4"> Presioname 4 </button>
+					</li>
+				</ol>
+			</section>
+			<hr>
+			
+			<section>
+				<h3> Metodos Relacionados </h3>
+				<!-- Eventos que podemos controlar desde el JS que pueden afectar al HTML -->
+				<h5> Eventos JavaScript para páginas web </h5>
+				<!-- Recuard CSS -> selectores -->
+				<ol> 
+					<li> 
+						getElementById
+						<p>
+							Afectamos un único ELEMENTO por su ID.
+							document.getElementById("IdDelControl")
+						</p>
+					</li>
+					<li>  </li>
+					<li>  </li>
+					<li>  </li>
+				</ol>
+			</section>
+			<hr>
+			
+			<!-- Tarea para la casa: Realiza la investigacion dentro/relacionados con una página web y complete la teoria en esta ´página web-->
+			<section>
+				<h3> Eventos Programables JavaScript dentro de una Página Web</h3>
+				<h5> Eventos para JavaScript para páginas webs </h5>
+				<h6>  Tarea final de JavaScript: Desarrolle un ejemplo para cada evento enlistado a continuación. </h6>
+				<ol> 
+					<li> DOMContentLoaded </li>
+						<p> 
+							Deficion:
+							para que sirve
+							funciona como
+							se hace
+						</p>
+					<li> load </li>
+					<li> unload </li>
+					<li> beforeload </li>
+					<li> visibilitychange </li>
+					<li> readystatechange </li>
+					<li> fullscreenchange y fullscreenerror </li>
+					<li> copy, cut, paste </li>
+					<li> selectionchange </li>
+					<li> scroll </li>
+				</ol>
+			</section>
+         </main>
+		 
+		 <!-- ================ Dentro del Body - Interno ================= -->
+		<script>
+			alert("Este es mi segundo mensaje alert - Interno - Dentro del Body");
+		</script>
+
+        <hr>
+        <!-- =============== Pie de Pagina =============== -->
+        <footer>
+            <p> Desarrollado por: jlcevall <br>
+                <a href="mailto: jujoceva@espol.edu.ec"> Correo </a> |  | 
+                <a href="tel:+593992300774"> Telefono</a> | 
+            </p>
+            <p> © - 2025 pagina de practicas académicas | ESPOL</p>
+        </footer>
+		
+		<!-- ================ Después del Body - Interno ================= -->
+		<script>
+			alert("Este es mi tercer mensaje alert - Interno - Después del Body");
+			document.write("Este es mi segundo mensaje generado con document.write - entro del body");
+			function mostrarAlert(){
+				alert("Este mensaje cuando al preisonar el botón Presioname2 - Script interno");
+			};
+		</script>
+		
+		<!-- ================ Antes del Body - Externo ================= -->
+		<!-- Es una mala practica llamar al javascript antes del body sea Interno o Externo -->
+		<script src="../JS/javascript.js"></script>
+		
+    </body>
+</html>
+
+<!-- https://www.codedex.io/ -->
+<!-- https://learngitbranching.js.org/?locale=es_AR -->

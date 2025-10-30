@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- ================ metadatos ================= -->
+        <meta charset="UTF-8">
+        <meta name="descripcion" content="practicas-- HTML, CSS, JS"> <!--  -->
+        <meta name="keywords" content="HTML, CSS, JavaScript"> <!--  -->
+        <meta name="author" content="Julio Cevallos"> <!--  -->
+        <meta http-equiv="refresh" content="10"> <!--  -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta> 
+
+        <!-- ================ Titulo e Icono ================= -->
+        <title> Practica CSS </title>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+        <link rel="icon" href="../img/Snorlax.ico" type="image/x-icon">
+        <!-- Resetea los estilos del browser -->
+         <!--
+        <link rel="stylesheet" href="../css/style_reset.css"> 
+        -->
+
+        <!--
+        <style>
+            p{
+                background:blue;
+            }
+            p{
+                background:green;
+            }
+        </style>
+        -->
+
+        <link rel="stylesheet" href="../css/estilo.css">
+    </head>
+
+    <body class="roboto-mono- ">
+        <hr>
+        <!-- =============== Barra de Navgacion =============== -->
+         <header>
+            <nav>
+                <a href="../index.html"> Inicio </a> | 
+                <a href="../pages/Practica_texto.html"> Práctica de Texto </a> | 
+                <a href="https://sites.google.com/fiec.espol.edu.ec/la-chocita-ecuatoriana?usp=sharing"> Práctica de Builder (Google Site) </a> | 
+                <a href="https://renovatumundo.my.canva.site/"> Práctica Canva (Link a Canva) </a> | 
+                <a href="../ia/index.html"> Práctica de Inteligencia Artificial </a> | 
+                <a href="../pages/Practica_Listas.html"> Práctica de Listas</a> | 
+                <a href="../pages/Practica_imagen.html"> Práctica de Imágenes </a> | 
+                <a href="../pages/Practica_audio.html"> Práctica de Audio </a> | 
+                <a href="../pages/Practica_video.html"> Práctica de Video </a> | 
+                <a href="../pages/Practica_tablas.html"> Práctica de Tablas </a> | 
+                <a href="../pages/Practica_css.html"> Práctica de CSS </a> | 
+                <a href="../CopyPaste/index.html"> Práctica de Copy Paste (Plantilla) </a> | 
+                <a href="../pages/Practica_js.html"> Práctica de JavaScript </a> | 
+                <a href="../pages/Practica_controles.html"> Práctica de Controles </a> | 
+                <a href="../pages/Practica_formulario.html"> Práctica de Formularios </a> | 
+                <a href="../pages/Practica_formulario2.html"> Práctica de Formularios-2 </a> | 
+                <a href="../pages/Practica_menuH.html"> Práctica de Menú Horizontal </a> | 
+                <a href="../pages/Practica_menuV.html"> Práctica de Menú Vertical </a> | 
+                <a href="../pages/Practica_crazy.html"> Práctica Crazy </a> | 
+            </nav>
+        </header>
+
+        <hr>
+        <!-- =============== Practica de etiquetas de CSS =============== -->
+         <main>
+            <h1 class="Titulo"> Practica de CSS </h1>
+
+            <span>
+                CSS nos ayuda/sirve para dar estilo y diseño a nuestra Página Web. <br>
+                    Para apricarlo tenemos 3 opciones: <br>
+            </span>
+            <div class="comportamiento">
+
+                <p class="caja">
+
+                    1.- En línea - código embebido<br>
+                    style="color:red">Línea de Estilo con código embebido<br>
+                </p>
+
+                <p class="caja">
+                    2.- Código Interno - Código en la cabecera <br>
+                    <!-- Debemos explicar los selectores -->
+                    &ltstyle&gt <br>
+                        p{<br>
+                            background:blue;<br>
+                        }<br>
+                    &lt/style&gt <br>
+                </p>
+
+                <p class="caja">
+                    3.- Externo - File .CSS <br>
+                    &ltlink rel="stylesheet" href="estilo.css"&gt
+                </p>
+            </div>
+
+            <div class="comportamiento">
+                <p class="caja">
+                    Modelo Cajas#1: <br>
+                    -Todo elemento de HTML se debe tratar como una caja.
+                </p>
+
+                <p class="caja">
+                    Modelo Cajas#2: <br>
+                    -Todo elemento de HTML se debe tratar como una caja.
+                </p >
+            </div>
+
+            <section class="Resalta">
+                <article>
+                    <h4> Notas: </h4>
+                    <p >
+                        1. Siempre se ejecuta de arriba hacia abajo, es decir, la misma etiqueta 
+                        la puede escribir dos veces y esta presentara en pantalla ek último efecto programado.
+                    </p>
+                    <p>
+                        2. Tener cuidado con montar las etiquetas en el diseño.
+                    </p>
+                    <p >
+                        3. Valide7Resetear antes de aplicar su diseño. Dependiendo de su diseño.
+                    </p>
+                </article>
+            </section>
+
+            <hr>
+
+            <span>
+                <h3>Hipervinculos</h3>
+                <hr>
+                <h5>Hipervinculos: abrir en una nueva pestaña</h5>
+                <p>
+                    Abrir un hipervínculo en una nueva pestaña es una función que permite que al hacer clic en un enlace, 
+                    la página web de destino se abra en una nueva pestaña del navegador en lugar de reemplazar la página actual.<br>
+                    <a href="../pages/Practica_audio.html" target="_blank"> Abrir en una pestaña nueva </a>
+                </p>
+                <hr>
+                <h5>Hipervinculos: abrir en la misma pestaña</h5>
+                <p>
+                    Un hipervínculo es un enlace a otra ubicación, que puede ser una página web, un documento o una sección del mismo documento. 
+                    "Abrir en la misma pestaña" es una opción que indica que al hacer clic en el enlace, el contenido de destino se cargará 
+                    en la pestaña actual del navegador, reemplazando el contenido original en lugar de abrirse en una pestaña nueva. <br>
+                    <a href="../pages/Practica_audio.html" target="_self"> Abrir en la misma nueva </a>
+                </p>
+                <hr>
+                <h5>Hipervinculos: abrir en una nueva pestaña, modo seguro</h5>
+                <p>
+                    Un hipervínculo es un enlace que dirige a otra página, documento o recurso. "Abrir en otra pestaña" es una instrucción para que ese 
+                    enlace se abra en una nueva pestaña del navegador en lugar de reemplazar la página actual. "Modo seguro" se refiere a una configuración 
+                    del navegador que carga la página sin complementos ni extensiones, lo que puede ser útil para solucionar problemas o prevenir riesgos 
+                    de seguridad. <br>
+                    <a href="../pages/Practica_audio.html" target="_blank" rel="noopener noreferrer"> Abrir en la misma nueva (Modo Segura) </a>
+                </p>
+                <br>
+            </span>
+
+            <hr>
+            <h2>Botones con Estlos</h2>
+            <h6>Evento over</h6>
+            <button class="clasbut">PI-KA-CHU</button>
+            <button>RAI-CHU</button>
+
+        
+         </main>
+
+        <hr>
+        <!-- =============== Pie de Pagina =============== -->
+        <footer>
+            <p> Desarrollado por: jlcevall <br>
+                <a href="mailto: jujoceva@espol.edu.ec"> Correo </a> |  | 
+                <a href="tel:+593992300774"> Telefono</a> | 
+            </p>
+            <p> © - 2025 pagina de practicas académicas | ESPOL</p>
+        </footer>
+    </body>
+</html>

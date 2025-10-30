@@ -1,0 +1,367 @@
+/*
+--En CSS tenemos varios tipos de selector.
+
+Estructura básica de CSS
+Selector{
+    linea al final;
+    propiedad: valor;
+    propiedad: valor;
+    propiedad: valor;
+    CSS no distingue entre mayuscula y minuscula en propiedades
+    Solo se ve diferencia entre mayus. y mins. en el nombre del file.css
+    style.css
+    STYLE.css
+}
+1. Selector de lemento (o de etiqueta)
+Solo requiere que se indique cual es la etiqueta HTML al que se quiere aplicar estilo
+    body{
+    ;
+    }
+
+2.Selector de clase, inicia con un punto
+La mayoria de frameworks usan este
+Los selectores de clase son "suyos"
+    .Titulo{}
+    .Cuerpo{}
+
+    HTML:
+    <p class"cuerpo">
+    </p>
+    Debe ser el mismo que se puedo en lHTML y CSS
+    Varioa elementos/etiquetas pueden aplicarr la misma clase
+
+3.Selector ID (se antepone #)
+--Cuando se seleciona/relaicona con un ID unico a una etiqueta/elemento en HTML
+
+    CSS:
+    #Titulo{}
+    #Cuerpo{}
+
+
+    HTML:
+    <p ID="Cuerpo">
+    </p>
+    Solo un elemento/etiqueta puede usar un ID
+
+4.Selector combinado o descendiente (donde especifica el selector HTML por niveles)
+Aplicar estilo a una etiqueta especifica dentro de otra etiqueta.
+HTML:
+    <div>
+        <h3></3>
+        <ol>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+
+        <h4></h4>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+============================================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Siqueremos aplicar el mismo diseño/estilo en varios sectores de la pagina se peude hacer
+1.selector de clase
+2.selector de etiqueta
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+============================================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1.BOX MODEL
+-Todo elemento de HTML se representa como una caja
+    Texto para escribir texto
+
+1.1. content --contenido
+1.2. padding -- relleno interno
+1.3. border --borde del elemento
+1.4. margin --espacio interno
+
+-Sirve para controlar el espacio y tamaño que ocupa cada elemento
+
+
++-------------------------------+
+|                               |
+|           Margin              |          espacio entre cajas y cajas
+|                               |
++-------------------------------+
+||           border             |           linea que rodea al padding
+||                              |
++-------------------------------+
+|||          padding            |       espacio entre el borde y el contenido
+|||                             |
++-------------------------------+
+||||           Content          |        el contenido real
+||||                            |
++-------------------------------+
+|||                             |
+|||                             |
++-------------------------------+
+||                              |
+||                              |
++-------------------------------+
+
+
+.caja{
+    width: 300px;
+    padding: 20px;
+    border:5px solid black;
+    margin:0px;
+}
+
+
+Ancho de página: %, px
+Recomendación. no siempre hay que forzar a que todo sea una sola medida
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+============================================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Proipedad display: define el comportamiento de un elemento en la pagina
+    -da instrucciones al navegador sobre el elemento y los demas elementos
+    -valor no son aleatorios, son predefinidos
+
+    display:
+        -block. ocupa la linea
+        -inline: lo presenta todo en la misma linea --aplica a texto
+        -inline-block: lo mismo en ancho y alto  --aplica a botones, iconos
+        -none: oculta el elemento  --menu
+        -flex: un contenedor se vuelve flexivo  --10px, 10%
+        -grip: cuadriculas 
+        -table: simula ser una tabla
+
+
+Propiedad box-shadow. sobra
+    parametros: 
+        1. desplazamiento horizontal --hacia los lados
+        2. desplazamiento vertical  --hacia arriba o abajo
+        3.difuminado   --expansion de sombre
+        4.rgba: (0,0,0,0,2)-color de sombra en los colores primarios, tonalidad opacidad o transferencia
+    valores: 
+
+    div {
+        box-shadow: 0, 5px, 10px, (0,0,0,0,2)
+    }
+    
+
+Valor sticky: define el comportamientl del elemento (fijo/estatico)
+    position:sticky
+
+Propiedad: top, right, botton, left
+    top: valor que se asigna a la parte de arriba 
+    right: valor que se asigna a la parte de derecha  
+    botton: valor que se asigna a la parte de abajo  
+    left: valor que se asigna a la parte de izquierda
+
+
+    .Cajatexto{
+        box-shadow: 0, 5px, 10px, (0,0,0,0,2)
+        position:sticky
+        top:0;
+        right: 0;
+    }
+
+Propiedad z-index: nos permite posicionar el elemento por encima de los demas (capas)
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+============================================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+*/
+
+
+/* Reset Básico*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+.roboto-mono- <uniquifier> {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+
+/* Selector de elemento */
+body{
+    font-family: 'comic sans ms', 'arial', 'Montserrat', 'sans-serif';
+   background: linear-gradient(135deg, #f8fbfc 0%, #eaf2f7 100%);;
+    color:#333;
+    line-height: 1.6;
+}
+
+main{
+    max-width: 90%;
+    margin:30px;
+    padding:0px;
+}
+
+header{
+    background: #003366;
+    color:white;
+    padding: 15px;
+    box-shadow: 0, 5px, 10px, rgba(0,0,0,0.2);
+    position:sticky;
+    top:0px;
+    z-index: 100;
+}
+
+header nav a{
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    margin:0 8px;
+    padding:5px 10px;
+}
+
+nav{
+    transition: background 0.3s;
+}
+
+.comportamiento{
+    display:flex;
+    background: lightblue;
+    margin:10px;
+    padding:5px;
+}
+
+.caja{
+    background: #D3D3D3;
+    width:30%;
+    padding: 5px;
+    border: 5px solid blue;
+    margin: 10px;
+    justify-content: center;
+    text-align: left;
+}
+
+button{
+    padding: 10px, 20px;
+    margin:10px;
+    border:none;
+    background: #003366;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor:pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button.clasbut{
+    background: yellow;
+    color:blue;
+}
+
+
+nav a:hover{
+    background: white;
+    color:black;
+    border-radius: 5px;
+    transform: scale(1.05);
+}
+
+
+button:hover{
+    background: #0055a5;
+    transform: scale(1.05);
+}
+
+h1, h2, h3{
+    margin-bottom: 20px;
+    color: #F54927;
+}
+
+.Titulo{
+    text-align: center;
+    color:red;
+    text-transform: uppercase;
+    animation: aparecer 2s ease-out;
+}
+
+@keyframes aparecer{
+    from{opacity: 0; transform: translateY (-20px)};
+    to { opacity: 1; transform: translateY(0)};
+}
+
+.Resalta{
+    color: #003366;
+    font-weight: bold;
+    background: #d8e6f5;
+    padding: 5px 10px;
+    border-left: 4px solid #003366;
+
+}
+
+footer{
+    background: #e59bbf;
+    color:white;
+    text-align: center;
+    padding:20px;
+    margin:10px;
+}
+
+/*
+---Selector de elemento
+p{
+    background: gray;
+}
+
+---Selector de clase
+.Cuerpo{
+    background: white;
+}
+
+---Selector de ID
+#especial{
+    background: yellow;
+}
+*/
+
+/*
+El diseño de la pagina debe ser adaptable a la pantalla, de tal forma que reorganiza el contenido de la misma
+Es indispisebla su manejo hoy en día
+La idea es mejorar la experiencia del usuario
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+Unidades:
+% para anchos fluidoz
+em y rem solo para la tipografía
+vh para la altura
+vw para el Ancho
+*/
+
+/* Estilo para Responsive design */
+
+/* 768 es el promedio de pantallas medianas */
+@media (max-width: 768px){
+    body{
+        background: orange;
+    }
+
+    .caja{
+        background: gray;
+        width:20%;
+    }
+} 
+
+/* 480 es el promedio de pantallas pequeñas */
+@media (max-width: 480px){
+    body{
+        background:red;
+    }
+    .caja{
+        background: yellow;
+        width:10%;
+    }
+
+} 
