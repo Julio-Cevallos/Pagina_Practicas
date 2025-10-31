@@ -179,15 +179,46 @@
 				<!-- Recuard CSS -> selectores -->
 				<ol> 
 					<li> 
-						getElementById
+						getElementById()
 						<p>
 							Afectamos un único ELEMENTO por su ID.
 							document.getElementById("IdDelControl")
 						</p>
+						<h1 id="IdTitulo"> Título Original </h1>
 					</li>
-					<li>  </li>
-					<li>  </li>
-					<li>  </li>
+					<!-- -->
+					<li> 
+						getElementsByClassName() 
+						<p>Todos los elementos cque tengan la misma CLASS se ven afectados por: getElementByClassName()</p>
+						<p class="item"> Este es el Párrafo#1 con la clase item</p>
+						<p class="item">Este es el Párrafo#2 con la clase item</p>
+						<p class="item">Este es el Párrafo#3 con la clase item</p>
+					</li>
+					<!-- -->
+					<li> 
+						getElementsByTagName()
+						<p>
+							Todos los elementos que tengan la misma etiqueta: getElementByTagName(p)
+						</p>	
+					</li>
+					<!-- -->
+					<li> 
+						querySelector()
+						<p>
+							El primer elemento que coincida con un selector CSS. document.querySelector()
+						</p>
+						<p> Veamos la ejecución paso a paso </p>
+					</li>
+					<!-- -->
+					<li>
+						querySelectorAll()
+						<p>
+							Todos los elementos HTML que coinciden con el un selector seleccionando: document.querySelectorAll()
+						</p>
+						<div> Primero </div>
+						<div> Segundo </div>
+						<div> Tercero </div>
+					</li>
 				</ol>
 			</section>
 			<hr>
@@ -199,21 +230,118 @@
 				<h6>  Tarea final de JavaScript: Desarrolle un ejemplo para cada evento enlistado a continuación. </h6>
 				<ol> 
 					<li> DOMContentLoaded </li>
-						<p> 
-							Deficion:
-							para que sirve
-							funciona como
-							se hace
-						</p>
+					<p> 
+						El evento DOMContentLoaded se dispara cuando el navegador ha terminado de analizar completamente 
+						el documento HTML y construido el árbol del DOM, pero sin esperar a que se carguen imágenes, hojas 
+						de estilo u otros recursos externos. Es ideal para ejecutar scripts que necesiten manipular elementos
+						del DOM de forma inmediata, garantizando que la estructura básica del documento ya esté lista para 
+						interactuar con JavaScript.
+					</p>
+					<p id="mensaje"> El DOM aún no ha sido cargado. </p>
+					
+					<!-- -->
 					<li> load </li>
+					<p>
+						El evento load ocurre cuando toda la página, incluidos los recursos como imágenes, hojas de estilo y 
+						scripts externos, ha sido completamente cargada. Es útil para ejecutar funciones que dependen de que 
+						todos los elementos visuales estén disponibles, como iniciar animaciones, medir elementos o cargar 
+						datos que requieren una interfaz totalmente renderizada.
+					</p>
+					<p id="estado"></p>
+
+					<!-- -->
 					<li> unload </li>
+					<p>
+						El evento unload se activa cuando el usuario está saliendo o recargando la página. Su función principal
+						es permitir la limpieza de recursos, el cierre de conexiones o el almacenamiento de información antes 
+						de abandonar el sitio. Sin embargo, su uso se ha limitado en navegadores modernos por razones de seguridad
+						y rendimiento, siendo reemplazado en muchos casos por beforeunload.
+					</p>
+					
+					<!-- -->
 					<li> beforeload </li>
+					<p>
+						El evento beforeunload se ejecuta justo antes de que la página comience a descargarse o cerrarse. Permite 
+						mostrar un cuadro de diálogo de confirmación para advertir al usuario sobre la pérdida de datos no 
+						guardados o interrumpir procesos en curso. Aunque su personalización visual está restringida por los 
+						navegadores, sigue siendo muy útil para proteger formularios o sesiones activas.
+					</p>
+					<textarea placeholder="Escribe algo antes de cerrar..."></textarea>
+
+					<!-- -->
 					<li> visibilitychange </li>
+					<p>
+						El evento visibilitychange detecta cuando cambia la visibilidad del documento, por ejemplo, cuando el 
+						usuario cambia de pestaña, minimiza la ventana o regresa a la página. Se utiliza para pausar tareas en
+						segundo plano, como animaciones o reproducción de video, y reanudarlas cuando la pestaña vuelve a estar
+						visible, mejorando así el rendimiento y la experiencia del usuario.
+					</p>
+					<p id="estado2"></p>
+
+					<!-- -->
 					<li> readystatechange </li>
+					<p>
+						El evento readystatechange se dispara cada vez que cambia el estado de carga del documento, reflejado en 
+						la propiedad document.readyState, que puede ser "loading", "interactive" o "complete". Es útil para 
+						controlar diferentes fases de carga, ejecutar código tan pronto el DOM está listo o esperar hasta que 
+						todos los recursos estén completamente cargados.
+					</p>
+					<p id="estadoReady"></p>
+
+					<!-- -->
 					<li> fullscreenchange y fullscreenerror </li>
+					<p>
+						El evento fullscreenchange se activa cuando un elemento entra o sale del modo de pantalla completa, 
+						permitiendo adaptar la interfaz o mostrar mensajes contextuales. Por su parte, fullscreenerror se 
+						dispara cuando ocurre un error al intentar cambiar a dicho modo (por permisos o incompatibilidad). 
+						Ambos son esenciales para gestionar correctamente las experiencias multimedia o de visualización 
+						ampliada.
+					</p><br><br>
+					<button id="btnFull"> Pantalla Completa </button><br>
+					<p id="messageFull"> Este mensaje se mostrara si no presionas el botón de arriba </p>
+
+					<!-- -->
 					<li> copy, cut, paste </li>
+					<p>
+						Los eventos copy, cut y paste se ejecutan cuando el usuario copia, corta o pega contenido en la página. 
+						Permiten interceptar y personalizar las acciones del portapapeles, por ejemplo, para validar datos, 
+						modificar el texto antes de copiarlo o impedir que se pegue contenido no permitido. Son ampliamente 
+						usados en aplicaciones de texto, formularios y editores web.
+					</p>
+					<textarea id="campo" placeholder="Copia, corta o pega aquí..."></textarea>
+					<p id="accion"> No se ha realizado ninguna acción </p>
+
+					<!-- -->
 					<li> selectionchange </li>
+					<p>
+						El evento selectionchange ocurre cada vez que cambia la selección de texto dentro del documento. Es útil 
+						para detectar qué parte del texto ha sido seleccionada por el usuario y reaccionar dinámicamente, como
+						mostrar opciones contextuales, subrayar fragmentos o realizar búsquedas. Este evento es clave para 
+						implementar funciones interactivas en editores o visores de texto.
+					</p>
+					<p id="slc"> Seleccionado algo </p>
+
+					<!-- -->
 					<li> scroll </li>
+					<p>
+						El evento scroll se dispara cuando el usuario desplaza la página o un elemento con barras de desplazamiento. 
+						Se utiliza comúnmente para efectos visuales como animaciones al hacer scroll, carga perezosa (lazy loading) 
+						de contenido o actualización de elementos en función de la posición actual. Aunque es muy potente, debe usarse
+						con precaución para evitar afectar el rendimiento si se ejecuta con demasiada frecuencia.
+					</p>
+					<div id="contenedorScrollDiv" style="width: 400px; height: 200px; overflow: auto; border: 2px solid black;">
+						<p>Linea 1</p>
+						<p>Linea 2</p>
+						<p>Linea 3</p>
+						<p>Linea 4</p>
+						<p>Linea 5</p>
+						<p>Linea 6</p>
+						<p>Linea 7</p>
+						<p>Linea 8</p>
+						<p>Linea 9</p>
+						<p>Linea 10</p>
+					</div>
+					<p id="pst"> Posición del scroll: 0px</p>
 				</ol>
 			</section>
          </main>
