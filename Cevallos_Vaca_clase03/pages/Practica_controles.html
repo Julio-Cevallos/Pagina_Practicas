@@ -13,6 +13,38 @@
         <!-- ================ Titulo e Icono ================= -->
         <title> Practica Controles</title>
         <link rel="icon" href="../img/Kadabra.ico" type="image/x-icon">
+
+
+		<!-- 
+			Teoría General:
+			FORM: 
+			- Agrupa a todos los controles de entrada que son de entrada em el formulario
+			- solo los controles que estan dentro del formulario son enviados al servidor (recoger data)
+			- NOTA: los controles que esten fuera del FORM no son considerados.
+			- Normalmente solo necesitamos un FORM
+
+			imput: 
+			- Control que va a recibir información de parte del usuario
+			- En cada input tiene que decir de que tipo es ese control
+			- Type: buttom: usted tiene que programar el evento para su ejecución
+
+			submit:
+			- Recorre uno a uno los controles que estan dentro de la etiqueta FORM
+			- jecuta la validación por default de cada control
+			- envia los datos recogidos al servidor
+
+			reset:
+			- Recorre uno a uno los controles que estan dentro de la etiqueta FORM
+			y los encera, borrando la información que esta ingresada o muestra la selección por deault
+
+			checkbox:
+			- Nos permite marcar varias selecciones a la vez, ejm: mis platso favoritos o músicas
+
+			option/radio buttom:
+			- Nos permite marcar solo una opción a la vez, ejm: mi estado cibil
+
+			Recomendación: siempre cada control deben llevar un ID y una NAME y bmos deben ser el mismo nombre
+		-->
     </head>
 
     <body>
@@ -34,7 +66,9 @@
             <a href="../pages/Practica_js.html"> Práctica de JavaScript </a> | 
             <a href="../pages/Practica_controles.html"> Práctica de Controles </a> | 
             <a href="../pages/Practica_formulario.html"> Práctica de Formularios </a> | 
+			<a href="../pages/Practica_formulario_AJAX.html"> Práctica de Formularios - AJAX - </a> |
             <a href="../pages/Practica_formulario2.html"> Práctica de Formularios-2 </a> | 
+			<a href="../pages/Practica_formulario2_AJAX.html"> Práctica de Formularios-2 AJAX - </a> | 
             <a href="../pages/Practica_menuH.html"> Práctica de Menú Horizontal </a> | 
             <a href="../pages/Practica_menuV.html"> Práctica de Menú Vertical </a> | 
             <a href="../pages/Practica_crazy.html"> Práctica Crazy </a> | 
@@ -50,6 +84,12 @@
 			De preferencia utilize ID
 			-->
 			
+
+			<!-- 
+				fieldset: agrupa lógicamente un grupo de controles
+				legend: es el título visible en el borde superior del conjunto
+				form: agrupa todos los controles 
+			-->
 			<fieldset>
 				<legend>Controles de Formulario en HTML</legend>
 				<form>
