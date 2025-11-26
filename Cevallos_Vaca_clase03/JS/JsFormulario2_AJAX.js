@@ -1,5 +1,5 @@
 //Esperar a que cargue el DOM
-window.addEventListener("DomContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", function() {
     //Esperar al evento submit del formulario
     const formulario = document.getElementById("frmDatos");
 
@@ -9,7 +9,6 @@ window.addEventListener("DomContentLoaded", function() {
     //--------------------------------------------------------------
     function FncDatosUser(event){
         event.preventDefault(); //evitar que se recargue/envie el formulario
-
         //Recuperar datos del formulario
         const nombre=document.getElementById("TxtNombre").value.trim();
 		const apellido=document.getElementById("TxtApellido").value.trim();
@@ -18,10 +17,10 @@ window.addEventListener("DomContentLoaded", function() {
 		const comentario=document.getElementById("TxtComent").value.trim();
 
         //Recupperamos el RadioButton por medio del Selector
-		const estadoCivil= document.querySelector("input['EstCivil']:checked")?.value;
+		const estadoCivil= document.querySelector("input[name='EstCivil']:checked")?.value;
 		const condiciones=document.getElementById("ChkTermino").checked;
 
-        //Validacion anual
+        //Validacion manual
         if(!nombre || !apellido || !email || !pais || !comentario || !estadoCivil){
             alert("No ha ingresado todos los datos");
             return;
@@ -71,12 +70,12 @@ window.addEventListener("DomContentLoaded", function() {
             //La carga de la data ('local')
             fetch("../json/AjaxFormulario2.json")
                 .then(response => {
-                    if(!responde.ok) throw new Error("Error al cargar el archivo .json local ");
-                    return response.json;
-                });
+                    if(!response.ok) throw new Error("Error al cargar el archivo .json local ");
+                    return response.json();
+                })
                 .then(data => {
-                    DivSalida.innerHTML =
-                    " <h3> Datos envaidos correctamente ...</h3>
+                    DivSalida.innerHTML = `
+                    <h3> Datos envaidos correctamente ...</h3>
                     <p>El servidor respondio: ${data.mensaje}</p>
                     <hr>
                     <p> Nombres: ${nombre} </p>
@@ -85,10 +84,10 @@ window.addEventListener("DomContentLoaded", function() {
                     <p> Pais: ${pais} </p>
                     <p> Comentarios: ${comentario} </p>
                     <p> Estado Civil: ${estadoCivil} </p>
-                    ";
-                });
+                    `;
+                })
                 .catch(error => {
-                    DivSalida.innerHTML= "<p>Error: ${error.message}</p>";
+                    DivSalida.innerHTML= `<p>Error: ${error.message}</p>`;
                 });
         }, 2000);
     }

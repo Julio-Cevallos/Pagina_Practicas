@@ -6,57 +6,86 @@
         <meta name="descripcion" content="practicas-- HTML, CSS, JS"> <!--  -->
         <meta name="keywords" content="HTML, CSS, JavaScript"> <!--  -->
         <meta name="author" content="Julio Cevallos"> <!--  -->
-        <meta http-equiv="refresh" content="10"> <!--  -->
+         <!--  <meta http-equiv="refresh" content="10"> -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--  -->
         <meta> <!--  -->
 
         <!-- ================ Titulo e Icono ================= -->
         <title> Practica Menu Vertical </title>
+        <link rel="stylesheet" href="../css/style_menuV.css">
+        <link rel="stylesheet" href="../css/style_footer.css">
         <link rel="icon" href="../img/Hitmonlee.ico" type="image/x-icon">
     </head>
 
     <body>
-        <hr>
         <!-- =============== Barra de Navegacion =============== -->
-        <nav>
-            <a href="../index.html"> Inicio </a> | 
-            <a href="../pages/Practica_texto.html"> Práctica de Texto </a> | 
-            <a href="https://sites.google.com/fiec.espol.edu.ec/la-chocita-ecuatoriana?usp=sharing"> Práctica de Builder (Google Site) </a> | 
-            <a href="https://renovatumundo.my.canva.site/"> Práctica Canva (Link a Canva) </a> | 
-            <a href="../ia/index.html"> Práctica de Inteligencia Artificial </a> | 
-            <a href="../pages/Practica_Listas.html"> Práctica de Listas</a> | 
-            <a href="../pages/Practica_imagen.html"> Práctica de Imágenes </a> | 
-            <a href="../pages/Practica_audio.html"> Práctica de Audio </a> | 
-            <a href="../pages/Practica_video.html"> Práctica de Video </a> | 
-            <a href="../pages/Practica_tablas.html"> Práctica de Tablas </a> | 
-            <a href="../pages/Practica_css.html"> Práctica de CSS </a> | 
-            <a href="../CopyPaste/index.html"> Práctica de Copy Paste (Plantilla) </a> | 
-            <a href="../pages/Practica_js.html"> Práctica de JavaScript </a> | 
-            <a href="../pages/Practica_controles.html"> Práctica de Controles </a> | 
-            <a href="../pages/Practica_formulario.html"> Práctica de Formularios </a> | 
-            <a href="../pages/Practica_formulario_AJAX.html"> Práctica de Formularios - AJAX - </a> |
-            <a href="../pages/Practica_formulario2.html"> Práctica de Formularios-2 </a> | 
-            <a href="../pages/Practica_formulario2_AJAX.html"> Práctica de Formularios-2 AJAX - </a> | 
-            <a href="../pages/Practica_menuH.html"> Práctica de Menú Horizontal </a> | 
-            <a href="../pages/Practica_menuV.html"> Práctica de Menú Vertical </a> | 
-            <a href="../pages/Practica_crazy.html"> Práctica Crazy </a> | 
-            <a href="../pages/Practica_bootstrap.html"> Práctica Bootstrap </a>
-        </nav>
+         <section>
+            <nav id="mySideBar" class="sideNav">
 
-        <hr>
+                <!-- Botón para el menú Hamburguesa-->
+                 <a href="javaScript:void(0)" class="clsBtn" onclick="closeNav()"> X </a>
+
+
+                <a href="../index.html"> Inicio </a>  
+                <a href="../pages/Practica_texto.html"> Práctica de Texto </a>  
+                <a href="https://sites.google.com/fiec.espol.edu.ec/la-chocita-ecuatoriana?usp=sharing"> Práctica de Builder (Google Site) </a>  
+                <a href="https://renovatumundo.my.canva.site/"> Práctica Canva (Link a Canva) </a>  
+                <a href="../ia/index.html"> Práctica de Inteligencia Artificial </a>  
+                <a href="../pages/Practica_Listas.html"> Práctica de Listas</a>  
+                <a href="../pages/Practica_imagen.html"> Práctica de Imágenes </a>  
+                <a href="../pages/Practica_audio.html"> Práctica de Audio </a>  
+                <a href="../pages/Practica_video.html"> Práctica de Video </a>  
+                <a href="../pages/Practica_tablas.html"> Práctica de Tablas </a>  
+                <a href="../pages/Practica_css.html"> Práctica de CSS </a>  
+                <a href="../CopyPaste/index.html"> Práctica de Copy Paste (Plantilla) </a>  
+                <a href="../pages/Practica_js.html"> Práctica de JavaScript </a>  
+                <a href="../pages/Practica_controles.html"> Práctica de Controles </a>  
+                <a href="../pages/Practica_formulario.html"> Práctica de Formularios </a>  
+                <a href="../pages/Practica_formulario_AJAX.html"> Práctica de Formularios - AJAX - </a> 
+                <a href="../pages/Practica_formulario2.html"> Práctica de Formularios-2 </a>  
+                <a href="../pages/Practica_formulario2_AJAX.html"> Práctica de Formularios-2 AJAX - </a>  
+                <a href="../pages/Practica_menuH.html"> Práctica de Menú Horizontal </a>  
+                <a class="active" href="../pages/Practica_menuV.html"> Práctica de Menú Vertical </a>  
+                <a href="../pages/Practica_crazy.html"> Práctica Crazy </a>  
+                <a href="../pages/Practica_bootstrap.html"> Práctica Bootstrap </a>
+            </nav>
+        </section>
+
         <!-- =============== Practica de etiquetas de Menu Vertical =============== -->
-         <main>
+         <main id="main" class="main">
+            <!-- Menu/Boton Hamburguesa-->
+             <span class="sideNavTitulo" style="font-size:30px;cursor:pointer" onclick="openNav()">
+                &#9776; Curso para ser un Maestro Pokemon     
+            </span>
+
             <h1> Practica de Menu Vertical </h1>
+
+            <div>
+                <h2> Mundo Pokemon - Kanto - </h2>
+                <h3> Bullbasaur </h3>
+                <p>
+                    Bulbasaur es uno de los tres Pokemonos que los entrenadores novatos pueden elegir. Es el más odiado por el Pinchimono , 
+                    debido a que es muy molesto y ruidoso.<br>
+                    Es cuadrúpedo y pequeño. Es de color verde, con manchas oscuras en su cuerpo. Sus ojos son grandes y rojos, 
+                    posee dos orejas puntiagudas y pequeñas, y en su lomo, posee un gran bulbo de color verde también.<br>
+                    Es bastante ruidoso. Cuando aparece, empieza a decir "boba" descontroladamente y de una forma muy ruidosa y molesta, 
+                    provocando que el Pinchimono le de una fuerte patada cada vez que aparece.
+                </p>
+                <div>
+                    <img src="../img/bullbasuur.jpeg" width="400" height="auto" alt="Pokemon-Bulbasaur">
+                </div>
+            </div>
          </main>
 
         <hr>
         <!-- =============== Pie de Pagina =============== -->
         <footer>
             <p> Desarrollado por: jlcevall <br>
-                <a href="mailto: jujoceva@espol.edu.ec"> Correo </a> |  | 
-                <a href="tel:+593992300774"> Telefono</a> | 
+                <a href="mailto: jujoceva@espol.edu.ec"> Correo </a> ||
+                <a href="tel:+593992300774"> Telefono</a>  
             </p>
             <p> © - 2025 pagina de practicas académicas | ESPOL</p>
         </footer>
+        <script src="../JS/menuV.js"></script>
     </body>
 </html>
