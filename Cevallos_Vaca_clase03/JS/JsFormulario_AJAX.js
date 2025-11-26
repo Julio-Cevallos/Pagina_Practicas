@@ -46,13 +46,13 @@ function FncReadFormulario(){
   }
 
    if(lv_correo === ""){
-    mensaje = "Debe ingresar su nombre";
+    mensaje = "Debe ingresar su correo";
     alert(mensaje);
     return;
   }
 
    if(lv_pais === ""){
-    mensaje = "Debe ingresar su nombre";
+    mensaje = "Debe elegir un pais";
     alert(mensaje);
     return;
   }
